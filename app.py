@@ -12,6 +12,7 @@ from aws_cdk_samples.aws_cdk_samples_stack import AwsCdkSamplesStack
 
 
 app = core.App()
-AwsCdkSamplesStack(app, "AwsCdkSamplesStack")
+
+AwsCdkSamplesStack(app, "AwsCdkSamplesStack", env=core.Environment(account="932770550094", region="eu-west-1"))
 
 app.synth()

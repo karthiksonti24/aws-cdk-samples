@@ -13,13 +13,15 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
 
-    author="author",
+    author="karthik",
 
     package_dir={"": "aws_cdk_samples"},
     packages=setuptools.find_packages(where="aws_cdk_samples"),
 
     install_requires=[
         "aws-cdk.core==1.94.1",
+        "aws-cdk.aws_s3==1.94.1",
+        "aws-cdk.aws_ec2==1.94.1"
     ],
 
     python_requires=">=3.6",
