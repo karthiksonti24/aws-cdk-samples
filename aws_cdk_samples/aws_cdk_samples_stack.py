@@ -11,6 +11,6 @@ class AwsCdkSamplesStack(cdk.Stack):
 
         cdk.CfnOutput(self, 'vpcId', value=vpc.vpc_id)
 
-        s3Bucket = s3.Bucket(self, "S3FromCDK")
+        s3Bucket = s3.Bucket(self, "S3FromCDK", versioned=True, removal_policy=cdk.RemovalPolicy.DESTROY, auto_delete_objects=True)
 
         cdk.CfnOutput(self , 'bucketName', value=s3Bucket.bucket_name)
